@@ -20,6 +20,10 @@ h3 {
     font-style: italic;
 }
 
+#game {
+    display: none;
+}
+
 hr {
     border: 1px solid #121858;
 }
