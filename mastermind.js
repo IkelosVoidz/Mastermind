@@ -51,7 +51,7 @@ function guess(){
     var guessInp = document.getElementById("guessInput").value;
 
     
-
+    //DONAR CLASS DIGIT
     var table = document.getElementById("gameTable");
     var row = table.insertRow();
     var cell1 = row.insertCell(0); 
@@ -71,14 +71,14 @@ function guess(){
     //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
 
     var greenSpan = document.createElement('SPAN');
-    greenSpan.setAttribute("id", "tick");
+    greenSpan.setAttribute("class", "tick");
     greenSpan.innerHTML = "&#10004";
     greenSpan.style.background="PaleGreen";
     cell5.appendChild(greenSpan);
     cell5.style.padding = "0px 0px 0px 15px";
 
     var yellowSpan = document.createElement('SPAN');
-    yellowSpan.setAttribute("id", "tick");
+    yellowSpan.setAttribute("class", "tick");
     yellowSpan.innerHTML = "&#10004";
     yellowSpan.style.background="Gold";
     cell7.appendChild(yellowSpan);
