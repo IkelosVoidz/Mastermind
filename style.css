@@ -43,6 +43,13 @@ button {
     border-radius: 50%;
     display: inline-block;
     text-decoration: #FFFFFF;
+
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    background: #B3B3B3;
+    border-color: #333;
+    border-style: solid;
 }
 
 table {
@@ -54,14 +61,6 @@ tr {
     text-align: center;
 }
 
-.dot {
-    font-size: 20px;
-    color: #000000;
-    text-align: center;
-    background: #B3B3B3;
-    border-color: #333;
-    border-style: solid;
-}
 
 .tick {
     font-size: 15px;
@@ -69,5 +68,6 @@ tr {
     text-align: center;
     border-color: #333;
     border-style: solid;
+    border-radius: 50%;
 }
 
