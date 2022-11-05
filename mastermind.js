@@ -57,7 +57,8 @@ function guess(){
         alert("Guess must be 4 digits long!!!")
     } 
     else{
-        //TAULA
+
+        //OMPLIR TAULA
         var table = document.getElementById("gameTable");
         var row = table.insertRow();
         var cells = new Array(8);
@@ -92,12 +93,10 @@ function guess(){
             }
         }
 
-        console.log("Nombre encerts: " + nEncerts);
-        console.log("Nombre existents: " + nExistents);
         cells[5].innerHTML = nEncerts;
         cells[7].innerHTML = nExistents;
-    
-        //TICKS VERD I TARONJA
+
+        //TICKS VERD I GROC
         var greenSpan = document.createElement('SPAN');
         greenSpan.setAttribute("class", "tick");
         greenSpan.innerHTML = "&#10004";
@@ -110,7 +109,41 @@ function guess(){
         yellowSpan.innerHTML = "&#10004";
         yellowSpan.style.background="Gold";
         cells[6].appendChild(yellowSpan);
+
+        
+        if(nEncerts == 4){
+            wins++;
+            //POSAR CELLS A VERD
+            alert("Congratulations " + username + "!!!");
+            endRound(table);
+        }
+
+        round++;
+        if(round < 10){
+            var roundLabel = document.getElementById("roundLbl")
+            roundLabel.innerHTML ="Round " + round +": ";
+        }
+        else endRound(table);
     } 
+}
+
+function endRound(tb){
+
+    round = 0;
+    if(nEncerts < 4){
+        loses++;
+        alert("You suck, " + username);
+    } 
+
+    nEncerts = 0;
+    nExistents = 0;
+
+    for (let i = 1; i < tb.rows.length; i++) {
+        tb.deleteRow(i);
+    }
+
+    document.getElementById("winsLoses").innerHTML ="Wins: " + wins + ", Loses: "+ loses;
+    randomToGuess = randomNumber();
 }
 
     
