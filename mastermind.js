@@ -48,7 +48,28 @@ function checkForValidNumber(randToCheck,number){
 
 function guess(){
 
-    var guessInp = getElementById("guessInput").value;
+    var guessInp = document.getElementById("guessInput").value;
+    var table = document.getElementById("gameTable");
+    var row = table.insertRow();
+    var cell1 = row.insertCell(0); 
+    var cell2 = row.insertCell(1); 
+    var cell3 = row.insertCell(2); 
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);  
+    var cell6 = row.insertCell(5); 
+    var cell7 = row.insertCell(6); 
+    var cell8 = row.insertCell(7); 
 
+    cell1.innerHTML = guessInp[0];
+    cell2.innerHTML = guessInp[1];
+    cell3.innerHTML =  guessInp[2];
+    cell4.innerHTML =  guessInp[3];
+    cell5.innerHTML = "&#10003";
+
+    /*var greenTick = document.createElement('img');
+    img.src = "link to image here";
+    x.appendChild(img);*/
 }
+
+    
     
