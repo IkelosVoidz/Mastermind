@@ -1,0 +1,17 @@
+h1 {
+    font-family:Georgia, Times, serif;
+    font-size:3rem; 
+    background-color:#121858;
+    color: #FFFFFF;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
