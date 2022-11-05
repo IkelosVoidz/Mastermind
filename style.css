@@ -47,6 +47,7 @@ button {
     background: #B3B3B3;
     border-color: #333;
     border-style: solid;
+    margin: 5px 10px;
 }
 
 table {
@@ -58,7 +59,6 @@ tr {
     text-align: center;
 }
 
-
 .tick {
     height: 20px;
     width: 20px;
@@ -67,5 +67,23 @@ tr {
     color: #000000;
     text-align: center;
     border-radius: 50%;
+    border-color: #333;
+    border-style: solid;
 }
 
+.digit {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+
+    background-color: #121858;
+    border-radius: 10%;
+    color: #FFFFFF;
+}
+
+/*
+TO DO:
+
+lògica
+quadrats
+*/
