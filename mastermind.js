@@ -1,5 +1,5 @@
 var username;
-var wins = 0, loses = 0;
+var wins, loses;
 var round;
 
 function startGame(){
@@ -13,6 +13,13 @@ function startGame(){
     username = playerName.value;
 
     document.getElementById("playerName").innerHTML = username;
-    
+    wins = 0;
+    loses = 0;
+    round = 1;
+}
+
+function guess(){
+
+    var guessInp = getElementById("guessInput").value;
 }
     
