@@ -2,6 +2,8 @@ var username;
 var wins, loses;
 var round;
 var randomToGuess;
+var nEncerts;
+var nExistents;
 
 function startGame(){
     var x = document.getElementById("playerInf");
@@ -74,13 +76,20 @@ function guess(){
         }
         
         //LOGICA
-        let nExistents = 0;
-        let nEncerts = 0;
+        nExistents = 0;
+        nEncerts = 0;
+        var existeix = false;
         for (let i = 0; i < 4; i++) {
-            if (guessValue[i] == randomToGuess[i]) nEncerts++;
+            if (guessValue[i] == randomToGuess[i]){
+                nEncerts++;
+                existeix = true;
+            } 
 
             for (let j = 0; j < 4; j++) {
-                if (guessValue[i] == randomToGuess[j] && j != i) nExistents++;
+                if ((guessValue[j] == randomToGuess[i]) && (existeix == false)){
+                    nExistents++;
+                    break;
+                }
             }
         }
 
