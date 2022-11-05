@@ -49,6 +49,9 @@ function checkForValidNumber(randToCheck,number){
 function guess(){
 
     var guessInp = document.getElementById("guessInput").value;
+
+    
+
     var table = document.getElementById("gameTable");
     var row = table.insertRow();
     var cell1 = row.insertCell(0); 
@@ -67,17 +70,17 @@ function guess(){
 
     //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
 
-    //TODO FICAR PADDING LEFT A LA CELL 5
-
     var greenSpan = document.createElement('SPAN');
-    greenSpan.setAttribute("id", "greenTick");
-    greenSpan.innerHTML = "&#10004"
+    greenSpan.setAttribute("id", "tick");
+    greenSpan.innerHTML = "&#10004";
+    greenSpan.style.background="PaleGreen";
     cell5.appendChild(greenSpan);
     cell5.style.padding = "0px 0px 0px 15px";
 
     var yellowSpan = document.createElement('SPAN');
-    yellowSpan.setAttribute("id", "yellowTick");
-    yellowSpan.innerHTML = "&#10004"
+    yellowSpan.setAttribute("id", "tick");
+    yellowSpan.innerHTML = "&#10004";
+    greenSpan.style.background="Gold";
     cell7.appendChild(yellowSpan);
 }
 
