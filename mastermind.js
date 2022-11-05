@@ -64,8 +64,8 @@ function guess(){
             if(i != 4 && i != 6){
                 var squareSpan = document.createElement('SPAN');
                 squareSpan.setAttribute("class", "digit");
-            }
-            cell.appendChild(squareSpan);
+                cell.appendChild(squareSpan);
+            } 
             cells[i] = cell;
         }
 
