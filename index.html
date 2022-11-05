@@ -14,8 +14,20 @@
         <button onclick="startGame()">Play!</button>
     </div>
     <div id="game">
-    
-
+        <h3>Player Name</h3>
+        <p>Wins:</p> <p id="wins"></p> <p>, Loses: </p> <p id="loses"></p>
+        <hr>
+        <table id="gameTable">
+            <tr>
+                <td><span class="dot"></span></td>
+                <td><span class="dot"></span></td>
+                <td><span class="dot"></span></td>
+                <td><span class="dot"></span></td>
+            </tr>
+        </table>
+        <label for="roundLbl"></label>
+        <input type="text" id="guessInput" name="guessInput">
+        <button onclick="guess()">Guess!</button>
     </div>
 </body>
 </html>
