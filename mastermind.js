@@ -111,21 +111,16 @@ function guess(){
         cells[6].appendChild(yellowSpan);
 
         round++;
-        if(round < 10){
-            var roundLabel = document.getElementById("roundLbl")
-            roundLabel.innerHTML ="Round " + round +": ";
-            if(nEncerts == 4){ 
-                //POSAR CELLS A VERD
-                endRound(table);
-            }
+        if(round == 11 || nEncerts == 4){
+            endRound(table);
         }
-        else endRound(table);
+        document.getElementById("roundLbl").innerHTML = "Round " + round +": ";
     } 
 }
 
 function endRound(tb){
 
-    round = 0;
+    round = 1;
     if(nEncerts < 4){
         loses++;
         alert("You suck, " + username);
@@ -139,8 +134,10 @@ function endRound(tb){
     nExistents = 0;
 
     console.log(tb.rows.length);
-    for (let i = 1; i < tb.rows.length; i++) {
-        tb.deleteRow(i);
+    var nRows = tb.rows.length;
+    for (let p = nRows; p > 1; p--) {
+        tb.deleteRow(p-1);
+        console.log(p-1);
     }
 
     document.getElementById("winsLoses").innerHTML ="Wins: " + wins + ", Loses: "+ loses;
