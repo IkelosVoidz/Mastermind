@@ -110,18 +110,14 @@ function guess(){
         yellowSpan.style.background="Gold";
         cells[6].appendChild(yellowSpan);
 
-        
-        if(nEncerts == 4){
-            wins++;
-            //POSAR CELLS A VERD
-            alert("Congratulations " + username + "!!!");
-            endRound(table);
-        }
-
         round++;
         if(round < 10){
             var roundLabel = document.getElementById("roundLbl")
             roundLabel.innerHTML ="Round " + round +": ";
+            if(nEncerts == 4){ 
+                //POSAR CELLS A VERD
+                endRound(table);
+            }
         }
         else endRound(table);
     } 
@@ -133,17 +129,23 @@ function endRound(tb){
     if(nEncerts < 4){
         loses++;
         alert("You suck, " + username);
-    } 
+    }
+    else{
+        wins++;
+        alert("Congratulations " + username + "!!!");
+    }
 
     nEncerts = 0;
     nExistents = 0;
 
+    console.log(tb.rows.length);
     for (let i = 1; i < tb.rows.length; i++) {
         tb.deleteRow(i);
     }
 
     document.getElementById("winsLoses").innerHTML ="Wins: " + wins + ", Loses: "+ loses;
     randomToGuess = randomNumber();
+    console.log(randomToGuess);
 }
 
     
