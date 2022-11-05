@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime page</title>
+    <script>
+        function getRandomAnimeQuote() {
+            // let response = fetch('https://animechan.vercel.app/api/random');
+            // console.log(response);
+
+            fetch('https://animechan.vercel.app/api/random')
+                .then(response => response.json())
+                .then(quote => {
+                    console.log(quote);
+                    document.getElementById('myText').innerHTML =
+                        "<p><i>" + quote.quote + "</i></br>" +
+                        "<b>" + quote.character + "</b>, " + quote.anime + "</p>";
+                })
+        }</script>
+</head>
+
+<body onload="getRandomAnimeQuote()">
+    <h1>Random Anime Quote</h1>
+    <div id="myText"></div>
+    <quote></quote>
+</body>
+
+</html>
