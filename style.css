@@ -7,6 +7,30 @@ h1 {
     text-align: center;
 }
 
+body {
+    /*background-color: #333333;*/
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h3 {
+    font-family:Georgia, Times, serif;
+    background-color: gainsboro;
+    padding: 5px;
+    font-style: italic;
+}
+
+hr {
+    border: 1px solid #121858;
+}
+
+button {
+    background-color: #121858;
+    color: #FFFFFF;
+    padding: 5px 28px;
+    border-radius: 20px;
+    margin-top: 15px;
+}
 
 .dot {
     height: 25px;
