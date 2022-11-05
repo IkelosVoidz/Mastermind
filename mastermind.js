@@ -47,7 +47,7 @@ function checkForValidNumber(randToCheck,number){
 }
 
 function guess(){
-
+    //INPUT
     var guessInp = document.getElementById("guessInput");
     var guessValue = guessInp.value;
     if((guessValue.length < 4) || (guessValue.length > 4)){
@@ -55,7 +55,7 @@ function guess(){
         alert("Guess must be 4 digits long!!!")
     } 
     else{
- 
+        //TAULA
         var table = document.getElementById("gameTable");
         var row = table.insertRow();
         var cells = new Array(8);
@@ -73,8 +73,21 @@ function guess(){
             cells[i].children[0].innerHTML = guessValue[i];    
         }
         
-        //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
+        //LOGICA
+        let nExistents = 0;
+        let nEncerts = 0;
+        for (let i = 0; i < 4; i++) {
+            if (guessValue[i] == randomToGuess[i]) nEncerts++;
+
+            for (let j = 0; j < 4; j++) {
+                if (guessValue[i] == randomToGuess[j] && j != i) nExistents++;
+            }
+        }
+
+        console.log("Nombre encerts: " + nEncerts);
+        console.log("Nombre existents: " + nExistents);
     
+        //TICKS VERD I TARONJA
         var greenSpan = document.createElement('SPAN');
         greenSpan.setAttribute("class", "tick");
         greenSpan.innerHTML = "&#10004";
@@ -87,7 +100,7 @@ function guess(){
         yellowSpan.innerHTML = "&#10004";
         yellowSpan.style.background="Gold";
         cells[6].appendChild(yellowSpan);
-    }  
+    } 
 }
 
     

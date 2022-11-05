@@ -72,18 +72,14 @@ tr {
 }
 
 .digit {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     display: inline-block;
-
+    text-align: center;
+    padding: 0px 0px 0px 0px;
     background-color: #121858;
     border-radius: 10%;
     color: #FFFFFF;
+    line-height: 35px;
+    font-size: 25px;
 }
-
-/*
-TO DO:
-
-lògica
-quadrats
-*/
