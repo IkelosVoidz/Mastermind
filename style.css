@@ -1,24 +1,85 @@
+#topbar{
+    background-color:#04a96d;
+}
+
+
 h1 {
-    font-family:Georgia, Times, serif;
     font-size:3rem; 
-    background-color:#04AA6D;
     color: #FFFFFF;
     padding: 10px 0px;
     margin-top: 0;
     text-align: center;
+    position:relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+h1:before{
+    content:" ";
+    display: block;
+    height: 5px;
+    width: 130px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+h1:after {
+    content:" ";
+    height: 5px;
+    width: 130px;
+    background: rgb(255, 255, 255);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    border-radius: 25px;
 }
 
 body {
     background-color: #333333;
+    color: #FFFFFF;
+    font-family:Georgia, Times, serif;
     margin: 0;
 }
 
-h3 {
-    font-family:Georgia, Times, serif;
+#score{
+    margin: auto;
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+#roundCount{
+    text-align: center;
+    padding-top: 20px;
+    margin: auto;
+}
+
+#playerInf,#game{
     background-color: #202124;
+    height: 600px;
+    width:350px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top:50px;
+    position:relative;
+}
+
+#guessDiv{
+    position:absolute;
+    bottom:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+h3 {
     padding: 5px 15px;
     font-style: italic;
-    color: #FFFFFF;
     border-radius: 20px;
 }
 
@@ -34,14 +95,15 @@ input[type=text] {
 }
 
 hr {
-    border: 1px solid #121858;
+    border: 3px solid #ffffff;
+    border-radius: 25px;
 }
 
 button {
-    background-color: #121858;
+    background-color: #04a96d;
     color: #FFFFFF;
     padding: 5px 28px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 15px;
 }
 
@@ -60,8 +122,7 @@ button {
 }
 
 table {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 tr {
@@ -86,9 +147,10 @@ tr {
     display: inline-block;
     text-align: center;
     padding: 0px 0px 0px 0px;
-    background-color: #121858;
+    background-color: #333333;
     border-radius: 10%;
     color: #FFFFFF;
-    line-height: 35px;
     font-size: 25px;
+    margin-top: 5px;
+    line-height: 35px;
 }

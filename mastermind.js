@@ -14,10 +14,10 @@ function startGame(){
 
     username = document.getElementById("fname").value;
     
-    document.getElementById("playerName").innerHTML = username;
     wins = 0;
     loses = 0;
     round = 1;
+    document.getElementById("score").innerHTML = username + "<br> Wins: " + wins + ", Loses: "+ loses;
     
     randomToGuess = randomNumber();
     console.log(randomToGuess);
@@ -114,7 +114,7 @@ function guess(){
         if(round == 11 || nEncerts == 4){
             endRound(table);
         }
-        document.getElementById("roundLbl").innerHTML = "Round " + round +": ";
+        document.getElementById("roundCount").innerHTML = "Round " + round;
     } 
 }
 
@@ -140,7 +140,7 @@ function endRound(tb){
         console.log(p-1);
     }
 
-    document.getElementById("winsLoses").innerHTML ="Wins: " + wins + ", Loses: "+ loses;
+    document.getElementById("score").innerHTML = username + " Wins: " + wins + ", Loses: "+ loses;
     randomToGuess = randomNumber();
     console.log(randomToGuess);
 }
