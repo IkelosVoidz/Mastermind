@@ -80,7 +80,7 @@ function guess(){
     var yellowSpan = document.createElement('SPAN');
     yellowSpan.setAttribute("id", "tick");
     yellowSpan.innerHTML = "&#10004";
-    greenSpan.style.background="Gold";
+    yellowSpan.style.background="Gold";
     cell7.appendChild(yellowSpan);
 }
 
