@@ -84,7 +84,6 @@ function guess(){
                 nEncerts++;
                 existeix = true;
             } 
-
             for (let j = 0; j < 4; j++) {
                 if ((guessValue[j] == randomToGuess[i]) && (existeix == false)){
                     nExistents++;
@@ -95,6 +94,8 @@ function guess(){
 
         console.log("Nombre encerts: " + nEncerts);
         console.log("Nombre existents: " + nExistents);
+        cells[5].innerHTML = nEncerts;
+        cells[7].innerHTML = nExistents;
     
         //TICKS VERD I TARONJA
         var greenSpan = document.createElement('SPAN');
