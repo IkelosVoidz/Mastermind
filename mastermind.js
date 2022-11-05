@@ -26,7 +26,6 @@ function randomNumber(){
     var rand = Math.floor(Math.random() * 10);
     var returnNumber = '';
     while(!validNumber){
-        //console.log( "Random number: " + rand);
         if(checkForValidNumber(rand,returnNumber) == true){
             returnNumber = returnNumber + rand;
             if(returnNumber.length == 4){
@@ -43,7 +42,6 @@ function checkForValidNumber(randToCheck,number){
         if(randToCheck == number[i]){
             return false;
         } 
-        console.log("Digit " + i + ": " + number[i] + "Random numb: " + randToCheck);
     }
     return true;
 }
