@@ -61,8 +61,10 @@ function guess(){
         var cells = new Array(8);
         for (let i = 0; i < 8; i++) {
             var cell = row.insertCell(i); 
-            var squareSpan = document.createElement('SPAN');
-            squareSpan.setAttribute("class", "digit");
+            if(i != 4 && i != 6){
+                var squareSpan = document.createElement('SPAN');
+                squareSpan.setAttribute("class", "digit");
+            }
             cell.appendChild(squareSpan);
             cells[i] = cell;
         }
