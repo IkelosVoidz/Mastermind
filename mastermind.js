@@ -12,5 +12,7 @@ function startGame(){
     var playerName = document.getElementById("fname");
     username = playerName.value;
 
-
+    document.getElementById("playerName").innerHTML = username;
+    
 }
+    
