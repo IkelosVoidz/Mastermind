@@ -48,40 +48,44 @@ function checkForValidNumber(randToCheck,number){
 
 function guess(){
 
-    var guessInp = document.getElementById("guessInput").value;
+    var guessInp = document.getElementById("guessInput");
+    var guessValue = guessInp.value;
+    if((guessValue.length < 4) || (guessValue.length > 4)){
+        guessInp.value = " ";
+        alert("Guess must be 4 digits long!!!")
+    } 
+    else{
+ 
+        var table = document.getElementById("gameTable");
+        var row = table.insertRow();
+        var cells = new Array(8);
+        for (let i = 0; i < 8; i++) {
+            var cell = row.insertCell(i); 
+            var squareSpan = document.createElement('SPAN');
+            squareSpan.setAttribute("class", "digit");
+            cell.appendChild(squareSpan);
+            cells[i] = cell;
+        }
 
+        for (let i = 0; i < 4; i++) {
+            cells[i].children[0].innerHTML = guessValue[i];    
+        }
+        
+        //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
     
-    //DONAR CLASS DIGIT
-    var table = document.getElementById("gameTable");
-    var row = table.insertRow();
-    var cell1 = row.insertCell(0); 
-    var cell2 = row.insertCell(1); 
-    var cell3 = row.insertCell(2); 
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);  
-    var cell6 = row.insertCell(5); 
-    var cell7 = row.insertCell(6); 
-    var cell8 = row.insertCell(7); 
-
-    cell1.innerHTML = guessInp[0];
-    cell2.innerHTML = guessInp[1];
-    cell3.innerHTML =  guessInp[2];
-    cell4.innerHTML =  guessInp[3];
-
-    //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
-
-    var greenSpan = document.createElement('SPAN');
-    greenSpan.setAttribute("class", "tick");
-    greenSpan.innerHTML = "&#10004";
-    greenSpan.style.background="PaleGreen";
-    cell5.appendChild(greenSpan);
-    cell5.style.padding = "0px 0px 0px 15px";
-
-    var yellowSpan = document.createElement('SPAN');
-    yellowSpan.setAttribute("class", "tick");
-    yellowSpan.innerHTML = "&#10004";
-    yellowSpan.style.background="Gold";
-    cell7.appendChild(yellowSpan);
+        var greenSpan = document.createElement('SPAN');
+        greenSpan.setAttribute("class", "tick");
+        greenSpan.innerHTML = "&#10004";
+        greenSpan.style.background="PaleGreen";
+        cells[4].appendChild(greenSpan);
+        cells[4].style.padding = "0px 0px 0px 15px";
+    
+        var yellowSpan = document.createElement('SPAN');
+        yellowSpan.setAttribute("class", "tick");
+        yellowSpan.innerHTML = "&#10004";
+        yellowSpan.style.background="Gold";
+        cells[6].appendChild(yellowSpan);
+    }  
 }
 
     
