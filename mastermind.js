@@ -64,11 +64,20 @@ function guess(){
     cell2.innerHTML = guessInp[1];
     cell3.innerHTML =  guessInp[2];
     cell4.innerHTML =  guessInp[3];
-    cell5.innerHTML = "&#10003";
 
-    /*var greenTick = document.createElement('img');
-    img.src = "link to image here";
-    x.appendChild(img);*/
+    //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
+
+    var greenSpan = document.createElement('SPAN');
+    greenSpan.setAttribute("id", "greenTick");
+    var t = document.createTextNode("&#10003");
+    greenSpan.appendChild(t);
+    cell5.appendChild(greenSpan);
+
+    var yellowSpan = document.createElement('SPAN');
+    greenSpan.setAttribute("id", "yellowTick");
+    var t2 = document.createTextNode("&#10003");
+    greenSpan.appendChild(t2);
+    cell5.appendChild(yellowSpan);
 }
 
     
