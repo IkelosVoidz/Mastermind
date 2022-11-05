@@ -67,17 +67,18 @@ function guess(){
 
     //FALTA LOGICA DEEE CONTAR QUANTS ENCERTS HI HAN I ESO
 
+    //TODO FICAR PADDING LEFT A LA CELL 5
+
     var greenSpan = document.createElement('SPAN');
     greenSpan.setAttribute("id", "greenTick");
-    var t = document.createTextNode("&#10003");
-    greenSpan.appendChild(t);
+    greenSpan.innerHTML = "&#10004"
     cell5.appendChild(greenSpan);
+    cell5.style.padding = "0px 0px 0px 15px";
 
     var yellowSpan = document.createElement('SPAN');
-    greenSpan.setAttribute("id", "yellowTick");
-    var t2 = document.createTextNode("&#10003");
-    greenSpan.appendChild(t2);
-    cell5.appendChild(yellowSpan);
+    yellowSpan.setAttribute("id", "yellowTick");
+    yellowSpan.innerHTML = "&#10004"
+    cell7.appendChild(yellowSpan);
 }
 
     
