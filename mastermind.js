@@ -10,7 +10,7 @@ function startGame(){
     var y = document.getElementById("game");
    
     x.style.display = "none";
-    y.style.display = "block";
+    y.style.display = "flex";
 
     username = document.getElementById("fname").value;
     
@@ -52,12 +52,12 @@ function guess(){
     //INPUT
     var guessInp = document.getElementById("guessInput");
     var guessValue = guessInp.value;
+    guessInp.value = "";
     if((guessValue.length < 4) || (guessValue.length > 4)){
-        guessInp.value = " ";
-        alert("Guess must be 4 digits long!!!")
+        alert("Guess must be 4 digits long!!!");
     } 
     else{
-
+        
         //OMPLIR TAULA
         var table = document.getElementById("gameTable");
         var row = table.insertRow();
@@ -91,6 +91,7 @@ function guess(){
                     break;
                 }
             }
+            existeix = false;
         }
 
         cells[5].innerHTML = nEncerts;
@@ -140,7 +141,7 @@ function endRound(tb){
         console.log(p-1);
     }
 
-    document.getElementById("score").innerHTML = username + " Wins: " + wins + ", Loses: "+ loses;
+    document.getElementById("score").innerHTML = username + "<br> Wins: " + wins + ", Loses: "+ loses;
     randomToGuess = randomNumber();
     console.log(randomToGuess);
 }

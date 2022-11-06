@@ -14,21 +14,23 @@
         <button onclick="startGame()">Play!</button>
     </div>
     <div id="game">
-        <h5 id="score"></h5>
-        <h3 id="roundCount">Round 1</h3>
-        <hr>
-        <table id="gameTable">
-            <tr>
-                <td><span class="dot">?</span></td>
-                <td><span class="dot">?</span></td>
-                <td><span class="dot">?</span></td>
-                <td><span class="dot">?</span></td>
-                <td style="padding-left:15px;"><span class="tick" style="background-color:palegreen;">&#10004</span></td>
-                <td>?</td>
-                <td><span class="tick" style="background-color:Gold;">&#10004</span></td>
-                <td>?</td>
-            </tr>
-        </table>
+        <div>
+            <h5 id="score"></h5>
+            <h3 id="roundCount">Round 1</h3>
+            <hr>
+            <table id="gameTable">
+                <tr>
+                    <td><span class="dot">?</span></td>
+                    <td><span class="dot">?</span></td>
+                    <td><span class="dot">?</span></td>
+                    <td><span class="dot">?</span></td>
+                    <td style="padding-left:15px;"><span class="tick" style="background-color:palegreen;">&#10004</span></td>
+                    <td>?</td>
+                    <td><span class="tick" style="background-color:Gold;">&#10004</span></td>
+                    <td>?</td>
+                </tr>
+            </table>
+        </div>
         <div id="guessDiv">
             <input type="number" id="guessInput" name="guessInput">
             <button onclick="guess()">Guess!</button>
