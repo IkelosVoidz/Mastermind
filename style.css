@@ -45,12 +45,15 @@ body {
     margin: 0;
 }
 
-#score{
-    margin: auto;
+.lightBackground{
     background-color: #333;
     text-align: center;
     padding: 10px;
     border-radius: 25px;
+}
+
+#score{
+    margin:auto;
 }
 
 #roundCount{
