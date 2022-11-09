@@ -25,7 +25,7 @@ function startGame(){
     document.getElementById("score").innerHTML = username + "<br> Wins: " + wins + ", Loses: "+ loses;
     
     randomToGuess = randomNumber();
-    console.log(randomToGuess);
+    c
 }
 
 function randomNumber(){
@@ -41,6 +41,7 @@ function randomNumber(){
         }
         else rand = Math.floor(Math.random() * 10);
     }
+    onsole.log(returnNumber);
     return returnNumber;
 }
 
@@ -139,16 +140,13 @@ function endRound(tb){
     nEncerts = 0;
     nExistents = 0;
 
-    console.log(tb.rows.length);
     var nRows = tb.rows.length;
     for (let p = nRows; p > 1; p--) {
         tb.deleteRow(p-1);
-        console.log(p-1);
     }
 
     document.getElementById("score").innerHTML = username + "<br> Wins: " + wins + ", Loses: "+ loses;
     randomToGuess = randomNumber();
-    console.log(randomToGuess);
 }
 
     
