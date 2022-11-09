@@ -1,3 +1,8 @@
+/*
+Sergi Barrachina Vives
+Pol Comí Porcar
+*/
+
 var username;
 var wins, loses;
 var round;
