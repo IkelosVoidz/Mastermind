@@ -9,9 +9,20 @@
     <div id="topbar"><h1>Master Mind</h1></div>
     <div id="playerInf">
         <h3>Player Information</h3>
+        <p>This is an online version of the popular game MasterMind, 
+            originally played by two players: a codemaker and a codebreaker, 
+            where the codemaker thinks of a random 4-digit number and the
+            codebreaker tries to guess it. The codebreaker has 10 rounds to
+            try to guess the code and at each round he tries to guess the number
+            and the codemaker gives him feedback of how close he is from actually
+            finding the answer. At every round, the codemaker gives 2 types of 
+            feedback: how many digits the other player guessed in the right position
+            and how many are guessed right but in the wrong position.
+        </p>
         <label for="fname">Name:</label>
         <input type="text" id="fname" name="fname"><br>
         <button onclick="startGame()">Play!</button>
+
     </div>
     <div id="game">
         <div>
