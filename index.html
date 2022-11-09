@@ -8,29 +8,30 @@
 <body>
     <div id="topbar"><h1>Master Mind</h1></div>
     <div id="playerInf">
-        <h3>Game Explanation</h3>
-        <p>This is an online version of the popular game MasterMind, 
-            originally played by two players: a codemaker and a codebreaker, 
-            where the codemaker thinks of a random 4-digit number and the
-            codebreaker tries to guess it. The codebreaker has 10 rounds to
-            try to guess the code and at each round he tries to guess the number
-            and the codemaker gives him feedback of how close he is from actually
-            finding the answer. At every round, the codemaker gives 2 types of 
-            feedback: how many digits the other player guessed in the right position
-            and how many are guessed right but in the wrong position.
-            In this version of it, the computer will be the codemaker and you will be
-            the codebreaker.
-        </p>
-
-        <h3>Player Information</h3>
-        <label for="fname">Submit your name:</label>
-        <input type="text" id="fname" name="fname"><br>
-        <button onclick="startGame()">Play!</button>
-
+        <div class="lightBackground"> 
+            <h3>Game Explanation</h3>
+            <p>This is an online version of the popular game MasterMind, 
+                originally played by two players: a codemaker and a codebreaker, 
+                where the codemaker thinks of a random 4-digit number and the
+                codebreaker tries to guess it. The codebreaker has 10 rounds to
+                try to guess the code and at each round he tries to guess the number
+                and the codemaker gives him feedback of how close he is from actually
+                finding the answer. At every round, the codemaker gives 2 types of 
+                feedback: how many digits the other player guessed in the right position
+                and how many are guessed right but in the wrong position.
+                In this version of it, the computer will be the codemaker and you will be
+                the codebreaker.
+            </p>
+        </div>
+        <div class="guessDiv">
+            <h3 class="lightBackground">Player Information</h3>
+            <input type="text" placeholder="Insert your name" id="fname" name="fname">
+            <button onclick="startGame()">Play!</button>
+        </div>
     </div>
     <div id="game">
         <div>
-            <h5 id="score"></h5>
+            <h5 class ="lightBackground" id="score"></h5>
             <h3 id="roundCount">Round 1</h3>
             <hr>
             <table id="gameTable">
@@ -46,7 +47,7 @@
                 </tr>
             </table>
         </div>
-        <div id="guessDiv">
+        <div class="guessDiv">
             <input type="number" id="guessInput" name="guessInput">
             <button onclick="guess()">Guess!</button>
         </div>

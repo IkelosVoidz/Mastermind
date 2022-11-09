@@ -52,6 +52,10 @@ body {
     border-radius: 25px;
 }
 
+#fname,h3{
+    width:auto;
+}
+
 #score{
     margin:auto;
 }
@@ -79,14 +83,18 @@ body {
     width:auto;
 }
 
-#guessDiv{
+.guessDiv{
     width:310px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-content: center;
     margin-left:auto;
     margin-right:auto;
+    text-align: center;
 }
+
+
 
 h3 {
     padding: 5px 15px;
@@ -94,11 +102,17 @@ h3 {
     border-radius: 20px;
 }
 
-input[type=text] {
-    background-color: #56585e;
+input{
+    background-color: #424242;
     border: #FFFFFF solid;
     border-width: 2px;
     border-radius: 5px;
+    color:white;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
 }
 
 #game {
