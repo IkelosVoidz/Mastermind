@@ -8,7 +8,7 @@
 <body>
     <div id="topbar"><h1>Master Mind</h1></div>
     <div id="playerInf">
-        <h3>Player Information</h3>
+        <h3>Game Explanation</h3>
         <p>This is an online version of the popular game MasterMind, 
             originally played by two players: a codemaker and a codebreaker, 
             where the codemaker thinks of a random 4-digit number and the
@@ -18,8 +18,12 @@
             finding the answer. At every round, the codemaker gives 2 types of 
             feedback: how many digits the other player guessed in the right position
             and how many are guessed right but in the wrong position.
+            In this version of it, the computer will be the codemaker and you will be
+            the codebreaker.
         </p>
-        <label for="fname">Name:</label>
+
+        <h3>Player Information</h3>
+        <label for="fname">Submit your name:</label>
         <input type="text" id="fname" name="fname"><br>
         <button onclick="startGame()">Play!</button>
 
