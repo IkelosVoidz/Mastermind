@@ -25,7 +25,6 @@ function startGame(){
     document.getElementById("score").innerHTML = username + "<br> Wins: " + wins + ", Loses: "+ loses;
     
     randomToGuess = randomNumber();
-    c
 }
 
 function randomNumber(){
@@ -41,7 +40,7 @@ function randomNumber(){
         }
         else rand = Math.floor(Math.random() * 10);
     }
-    onsole.log(returnNumber);
+    console.log(returnNumber);
     return returnNumber;
 }
 
